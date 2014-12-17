@@ -1,0 +1,68 @@
+<div class="carousel-page">
+
+  <div class="slideshow-container"></div>
+  <h1>This a simple carousel that runs on a schedule</h1>
+
+  <div class="content">
+    <h2>About the carousel</h2>
+
+    <p>
+      This light-weight carousel (2K) allows you to easily create a home page slider that runs on a schedule.
+    </p>
+    <ul>
+      <li>
+        Customize the dates you want each slide to play.
+      </li>
+      <li>
+        Specify the speed of the carousel
+      </li>
+      <li>
+        Optimize load time with lazy load (On initial page load, it loads only the first image instead of all the images at once)
+      </li>
+    </ul>
+
+    <h2>How to use</h2>
+    <p>
+      Download the <a href="http://carousel-schedule.herokuapp.com/js/carouselSource.js">carousel source code</a>.
+    </p>
+
+    <script src="https://gist.github.com/myfashionhub/f706d8caac8370170f8a.js"></script>
+
+
+    <h2>Slide config generator</h2>
+    <div class="actions">
+    </div>
+
+    <div class="slide-forms">
+    <form class='new-slide'>
+      <div class="error">
+        <span class='src'></span>
+        <span class='url'></span>
+        <span class='begin'></span>
+        <span class='end'></span>
+      </div>
+      <div class="success"></div>
+      <label>Image link:</label>
+      <input type='text' class='src'>
+      <label>Channel link:</label>
+      <input type='text' class='url'>
+      <label>Begin date (yyyy, mm, dd):</label>
+      <input type='text' class='begin'>
+      <label>End date (yyyy, mm, dd):</label>
+      <input type='text' class='end'>
+      <input type='submit' class='save-slide' value='Add slide'>
+    </form>
+    </div>
+
+    <pre>
+    var slideConfig = [
+    <ul class="slide-config"></ul>
+    ];
+    </pre>
+
+  <p>
+    See <a href='https://github.com/myfashionhub/carousel'>the documentation</a>.
+  </p>
+
+  </div> <!-- end content -->
+</div> <!-- end carousel page -->

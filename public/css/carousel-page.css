@@ -1,0 +1,134 @@
+/* GENERAL */
+body, html {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: 'Helvetica';
+    font-size: 16px;
+    background: #fff;   
+}
+
+a {
+    color: #FF5800;
+    text-decoration: none;
+}
+
+.wrapper {
+    min-height: 100%;
+    margin-bottom: 40px;
+}
+
+/* NAV BAR */
+nav {
+    overflow: auto;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 3em;
+}
+
+nav a {
+    font-size: 1.3em;
+}
+
+nav a.current, nav a:hover {
+    border-bottom: 3px solid #ccc;
+}
+
+
+/* CONTENT */
+h1 {
+    margin: 20px 0 20px 20px;
+}
+
+h1, h2, p {
+    color: #333;
+}
+
+.content {
+    margin: 20px auto;
+    color: #333;
+}
+
+.content p, .content li {
+    line-height: 1.5em;
+}
+
+.code {
+    width: 900px;
+    margin: 0 auto;
+}
+
+.about, .config {
+    width: 600px;
+    margin: 0 auto;
+}
+
+/* CONFIG FORM */
+form {
+    width: 600px;
+}
+
+form label {
+    font-weight: bold;
+    margin: 15px 0 6px 0;
+}
+
+form label, form input {
+    display: block;
+    width: 100%;
+}
+
+form.new-slide {
+    margin: 10px auto;
+    overflow: auto;
+}
+
+.save-slide {
+    float: right;
+    margin-top: 15px;
+}
+
+.actions {
+    width: 700px;
+    text-align: right;
+    margin: 20px auto 0 auto;
+}
+
+.error {
+    color: red;
+}
+
+.error span {
+    display: none;
+}
+
+.success {
+    color: green;
+    display: none;
+}
+
+/* SLIDE CONFIG OBJECT */
+.slide-config {
+    list-style-type: none;
+}
+
+pre {
+    font-family: 'Monospace';
+}
+
+footer {
+    text-align: center;
+    height: 40px;
+}
+
+footer p {
+    display: inline-block;
+    vertical-align: top;
+}
