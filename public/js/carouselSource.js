@@ -24,7 +24,6 @@ function Carousel() {
     firstSlide.addClass('current');
 
     // Create new carousel & replace existing one
-    $('.carousel').remove();
     $(container).html(carousel);
   };
 
@@ -40,6 +39,7 @@ function Carousel() {
           currentSlides.push(slides[i]);
       }
     }
+
     return currentSlides;
   };
 

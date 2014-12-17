@@ -1,13 +1,15 @@
 jQuery(document).ready(function() {
-    // Sample carousel
-    var carousel = new Carousel();
-    carousel.init(slideConfig, '.slideshow-container', 4000);
+  setTimeout(function() {
+  // Sample carousel
+  var carousel = new Carousel();
+  carousel.init(slideConfig, '.slideshow-container', 4000);
+  }, 300);
 
-    // Refresh twice a day
-    setInterval(function() {
-        var carousel = new Carousel();
-        carousel.init(slideConfig, '.slideshow-container', 4000);
-    }, 43200000);
+  // Refresh twice a day
+  setInterval(function() {
+      var carousel = new Carousel();
+      carousel.init(slideConfig, '.slideshow-container', 4000);
+  }, 43200000);
 
 });
 
