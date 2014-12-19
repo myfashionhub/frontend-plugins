@@ -1,0 +1,1 @@
+web: cd public && python -m SimpleHTTPServer $PORT
