@@ -1,12 +1,60 @@
 /* GENERAL */
 body, html {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    font-family: 'Helvetica';
-    font-size: 16px;
-    background: #fff;   
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: 'Helvetica';
+  font-size: 16px;
+  color: #333; 
+  background: #fff;   
 }
+
+p {
+    color: #333;
+}
+
+a {
+    color: #ff6e00;
+    text-decoration: none;
+}
+
+a:hover {
+    color:#e66300;
+}
+
+/* LAYOUT */
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1274px;
+  min-width: 800px;
+}
+.content {
+  width: 70%;
+  margin: 20px auto;
+   
+}
+
+form.trial {
+    width: 100%;
+    margin-top: 2em;
+}
+
+form.trial input[type='text'] {
+    width: 60%;
+}
+
+form.trial, #refresh {
+
+}
+
+.about {
+    margin-top: 3em;
+    border-top: 1px dashed #555;
+}
+
+
+
 
 a {
     color: #FF5800;
@@ -44,17 +92,13 @@ nav a.current, nav a:hover {
 
 /* CONTENT */
 h1 {
-    margin: 20px 0 20px 20px;
+    margin: 1em 0;
 }
 
 h1, h2, p {
     color: #333;
 }
 
-.content {
-    margin: 20px auto;
-    color: #333;
-}
 
 .content p, .content li {
     line-height: 1.5em;
