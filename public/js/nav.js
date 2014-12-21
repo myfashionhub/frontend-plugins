@@ -1,5 +1,5 @@
 $(function() {
-  $('.content').children().hide();
+  $('.wrapper').children().hide();
   displayContent();
 
   $('nav a').click(function(e) {
@@ -8,8 +8,9 @@ $(function() {
   });
 
   // Load page content
-  $('.carousel-anchor').load('carousel.html');
-  $('.widget-anchor').load('widget.html');
+  $('.splash').load('splash.html');
+  $('.slideshow').load('carousel.html');
+  $('.widget').load('widget.html');
 });
 
 function toggleNav(divName) {
@@ -17,18 +18,18 @@ function toggleNav(divName) {
     var currentTab = $('nav a[href="#'+divName+'"]');
     currentTab.addClass('current');
 
-    $('.content').find('.current').removeClass('current').hide();
-    $('.content').find('div.'+divName).addClass('current').fadeIn();
+    $('.wrapper').find('.current').removeClass('current').hide();
+    $('.wrapper').find('div.'+divName).addClass('current').fadeIn();
 }
 
 function displayContent() {
-    var currentHash = window.location.hash;
-    if (currentHash === '') {
-       $('nav a').first().addClass('current');
-        $('.content').children().first().addClass('current').fadeIn();
-    } else {
-        var divName = currentHash.replace('#', '');
-        toggleNav(divName);
-    }
+  var currentHash = window.location.hash;
 
+  if (currentHash === '') {
+    $('nav a').first().addClass('current');
+    $('.wrapper').children().first().addClass('current').fadeIn();
+  } else {
+    var divName = currentHash.replace('#', '');
+    toggleNav(divName);
+  }
 }

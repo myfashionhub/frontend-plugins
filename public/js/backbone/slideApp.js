@@ -1,16 +1,17 @@
+// Make this a router, #carousel-page
 function slideAppInit(collection) {
     var slidesView = new SlidesView({
         collection: collection,
-        el: jQuery('.slide-config')
+        el: $('.slide-config')
     });
 
     $('.new-slide').submit(function(e) {
         saveSlide(e, collection);
-    }); 
+    });
 
     $('.save-slide').click(function(e) {
         saveSlide(e, collection);
-    });     
+    });
 }
 
 function saveSlide(e, collection) {
@@ -20,20 +21,20 @@ function saveSlide(e, collection) {
     var src = form.find('input.src').val();
     var url = form.find('input.url').val();
     var begin = form.find('input.begin').val();
-    var end = form.find('input.end').val();    
+    var end = form.find('input.end').val();
 
     if (validateEntries(src, url, begin, end)) {
-        collection.add({src: src, url: url, begin: begin, end: end});           
-        $('.success').html('Slide added successfully').css('display', 'block').fadeIn();  
+        collection.add({src: src, url: url, begin: begin, end: end});
+        $('.success').html('Slide added successfully').css('display', 'block').fadeIn();
         setTimeout(function() {
             //$('.success').hide();
-        }, 2000)        
-    }   
+        }, 2000)
+    }
 }
 
 function validateEntries(src, url, begin, end) {
     validateLinks(src, url);
-    validateDates(begin, 'begin'); 
+    validateDates(begin, 'begin');
     validateDates(end, 'end');
     var errors = 0;
     _.each($('.error span'), function(span) {
@@ -42,10 +43,10 @@ function validateEntries(src, url, begin, end) {
         }
     });
     if (errors === 0) {
-        return true; 
+        return true;
     } else {
         return false;
-    }  
+    }
 }
 
 
@@ -55,7 +56,7 @@ function validateLinks(src, url) {
         processError('src', error);
     } else {
         processError('src', '');
-    } 
+    }
 
     if (url.indexOf('.waywire.com') === -1) {
         var error = 'Invalid channel link.';
@@ -63,8 +64,8 @@ function validateLinks(src, url) {
         processError('url', error);
     } else {
         processError('url', '');
-    }   
-}   
+    }
+}
 
 function validateDates(dateString, whichDate) {
     var dateArray = [];
