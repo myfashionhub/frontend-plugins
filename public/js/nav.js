@@ -1,15 +1,15 @@
 $(function() {
-    $('.content').children().hide();
-    displayContent();
+  $('.content').children().hide();
+  displayContent();
 
-    $('nav a').click(function(e) {
-        var divName = $(e.target).attr('href').replace('#', '');
-        toggleNav(divName);
-    });
+  $('nav a').click(function(e) {
+      var divName = $(e.target).attr('href').replace('#', '');
+      toggleNav(divName);
+  });
 
-    // Load page content
-    $('.carousel-anchor').load('carousel.html');
-    $('.widget-anchor').load('widget.html');
+  // Load page content
+  $('.carousel-anchor').load('carousel.html');
+  $('.widget-anchor').load('widget.html');
 });
 
 function toggleNav(divName) {

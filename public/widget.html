@@ -1,21 +1,40 @@
-<div class="widget-page">
- <h1>Tweet Stream Widget</h1>
- <div id ="tweet-wrapper"></div>
+<div class="content">
+  <h1>Tweet Stream Widget</h1>
+  <div id ="tweet-wrapper"></div>
 
- <form class='trial'>
-    <input type='text' placeholder='Paste your Twitter widget id'>
-    <button>Try it</button>
-    <p>
-      Examples:<br/>
-      514055194921799680<br/>
-      258765041829019650<br/>
-      495312900106383360
-    </p>
+  <p>
+    Paste your Twitter widget ID in the form or click on the example IDs to test the feeds.
+  </p>
+
+  <form class='trial'>
+    <input type='text' placeholder='Paste your Twitter widget ID'>
+    <button>Submit</button>
   </form>
 
-  <button id='refresh'>Refresh</button>
+  <p>Examples:</p>
+  <ul class='widget-id'>
+    <li>514055194921799680</li>
+    <li>258765041829019650</li>
+    <li>495312900106383360</li>
+    <li>544609122302566400</li>
+  </ul>
 
-  <div class='about'>
-    <p>View <a href="https://github.com/myfashionhub/tweet-timeline">the documentation</a>.</p>
-  </div>
+  <p>View <a href="https://github.com/myfashionhub/tweet-timeline">the documentation</a>.</p>
 </div>
+
+<script>
+$(function() {
+  $('form.trial').submit(function(e) {
+    e.preventDefault();
+    var widgetId = $('form.trial input').val();
+    var trialConfig = $.extend(tweetConfig, {id: widgetId});
+    fetchTweet(trialConfig);
+  });
+
+  $('.widget-id li').click(function(e) {
+    var widgetId = $(e.target).html();
+    var trialConfig = $.extend(tweetConfig, {id: widgetId});
+    fetchTweet(trialConfig);
+  });
+});
+</script>
