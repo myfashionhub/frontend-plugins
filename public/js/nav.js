@@ -1,6 +1,6 @@
 $(function() {
-  $('.wrapper').children().hide();
   displayContent();
+  $('.wrapper').children().hide();
 
   $('nav a').click(function(e) {
       var divName = $(e.target).attr('href').replace('#', '');
@@ -27,8 +27,7 @@ function displayContent() {
   var currentHash = window.location.hash;
 
   if (currentHash === '') {
-    $('nav a').first().addClass('current');
-    $('.wrapper').children().first().addClass('current').fadeIn();
+    window.location.href = 'splash.html';
   } else {
     var divName = currentHash.replace('#', '');
     toggleNav(divName);
