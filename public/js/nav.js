@@ -11,6 +11,7 @@ $(function() {
   $('.splash').load('splash.html');
   $('.slideshow').load('carousel.html');
   $('.widget').load('widget.html');
+  $('.lazyload').load('lazyload.html');
 });
 
 function toggleNav(divName) {

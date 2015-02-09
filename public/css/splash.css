@@ -1,0 +1,49 @@
+.splash {
+  min-height: 100%;
+  width: 100%;
+  margin: 0;
+  overflow: auto;
+  background-color: #fff;
+}
+
+.splash footer {
+  position: absolute;
+  bottom: 0;
+}
+
+.splash footer p {
+  color: #fff;
+  text-align: center;
+}
+
+.splash .container {
+  width: 400px;
+  margin: 10% auto;
+}
+
+.splash .container p {
+  color: #fff;
+}
+
+.splash nav {
+  font-family: 'Open Sans';
+  font-size: 2em;
+}
+
+.splash nav li {
+  margin: 1.3em 0;
+}
+
+.splash nav a {
+  width: 100%;
+  display: block;
+}
+
+.splash nav li i {
+  display: none;
+  margin-left: 1em;
+}
+
+.splash nav li:hover i {
+  display: inline;
+}

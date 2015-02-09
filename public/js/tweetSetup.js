@@ -16,7 +16,6 @@ function fetchTweet(tweetConfig) {
 
 function refreshFeed() {
   if (globalTweets.length === 0) {
-      console.log('no tweet')
       // No tweet, keep fetching
       fetchCount = 0;
       setTimeout(fetchTweet, 1000);
@@ -25,7 +24,6 @@ function refreshFeed() {
       // without reseting fetchCount
       fetchTweet();
   } else {
-      console.log('refresh later')
       // Fetch again after 2 mins
       fetchCount = 0;
       setTimeout(fetchTweet, 120000);
