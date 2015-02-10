@@ -9,4 +9,6 @@ $(window).load(function() {
   setTimeout(function() {
     $('.splash .container').fadeIn();
   }, 2000);
+
+  $('.splash nav a').click(displayContent);
 });

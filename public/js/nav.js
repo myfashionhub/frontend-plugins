@@ -3,8 +3,8 @@ $(function() {
   $('.wrapper').children().hide();
 
   $('nav a').click(function(e) {
-      var divName = $(e.target).attr('href').replace('#', '');
-      toggleNav(divName);
+    var divName = $(e.target).attr('href').replace('#', '');
+    toggleNav(divName);
   });
 
   // Load page content
