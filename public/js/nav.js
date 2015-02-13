@@ -5,6 +5,7 @@ $(function() {
   $('nav a').click(function(e) {
       var divName = $(e.target).attr('href').replace('#', '');
       toggleNav(divName);
+      displayContent();
   });
 
   // Load page content
@@ -15,12 +16,11 @@ $(function() {
 });
 
 function toggleNav(divName) {
-    $('nav a.current').removeClass('current');
-    var currentTab = $('nav a[href="#'+divName+'"]');
-    currentTab.addClass('current');
-
-    $('.wrapper').find('.current').removeClass('current').hide();
-    $('.wrapper').find('div.'+divName).addClass('current').fadeIn();
+  $('nav a.current').removeClass('current');
+  var currentTab = $('nav a[href="#'+divName+'"]');
+  currentTab.addClass('current');
+  $('.wrapper').find('.current').removeClass('current').hide();
+  $('.wrapper').find('div.'+divName).addClass('current').fadeIn();
 }
 
 function displayContent() {
