@@ -1,26 +1,10 @@
-$(function() {
-  displayContent();
-  $('.wrapper').children().hide();
-
-  $('nav a').click(function(e) {
-      var divName = $(e.target).attr('href').replace('#', '');
-      toggleNav(divName);
-      displayContent();
-  });
-
-  // Load page content
-  $('.splash').load('splash.html');
-  $('.slideshow').load('carousel.html');
-  $('.widget').load('widget.html');
-  $('.lazyload').load('lazyload.html');
-});
-
 function toggleNav(divName) {
   $('nav a.current').removeClass('current');
   var currentTab = $('nav a[href="#'+divName+'"]');
   currentTab.addClass('current');
-  $('.wrapper').find('.current').removeClass('current').hide();
-  $('.wrapper').find('div.'+divName).addClass('current').fadeIn();
+
+  $('.wrapper').find('.current').removeClass('current');
+  $('.wrapper').find('div.'+divName).addClass('current').hide().fadeIn();
 }
 
 function displayContent() {
