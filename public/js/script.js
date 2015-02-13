@@ -9,6 +9,7 @@ $(function() {
   $('.slideshow').load('carousel.html');
   $('.widget').load('widget.html');
   $('.lazyload').load('lazyload.html');
+  $('.pagination').load('pagination.html');
 
   // Slide generator Backbone
   var slides = new SlideCollection();

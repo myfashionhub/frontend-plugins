@@ -1,10 +1,9 @@
 function toggleNav(divName) {
   $('nav a.current').removeClass('current');
-  var currentTab = $('nav a[href="#'+divName+'"]');
-  currentTab.addClass('current');
+  $('nav a[href="#'+divName+'"]').addClass('current');
 
   $('.wrapper').find('.current').removeClass('current');
-  $('.wrapper').find('div.'+divName).addClass('current').hide().fadeIn();
+  $('.wrapper').find('div.'+divName).addClass('current');
 }
 
 function displayContent() {
@@ -14,6 +13,6 @@ function displayContent() {
     window.location.href = 'splash.html';
   } else {
     var divName = currentHash.replace('#', '');
-    toggleNav(divName);
+    toggleNav(divName)
   }
 }
