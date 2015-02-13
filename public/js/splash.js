@@ -1,10 +1,8 @@
 $(window).load(function() {
   $('.splash .container').hide();
+  $('.splash .background-image').hide();
 
-  $('.splash').animate({
-    backgroundColor: "#000",
-    height: 600
-  }, 3000);
+  $('.splash .background-image').fadeIn(2000);
 
   setTimeout(function() {
     $('.splash .container').fadeIn();
