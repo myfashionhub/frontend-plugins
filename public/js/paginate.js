@@ -21,7 +21,11 @@ function Pagination(paginationDiv, paginationObject) {
   };
 
   this.buildPagination = function() {
-    var pageArray = _.range(1, this.numPages + 1);
+    var pageArray = [];
+    for (var i = 1; i < this.numPages + 1; i++) {
+      pageArray.push(i);
+    }
+
     for (var i = 0; i < pageArray.length; i++) {
       pageArray[i] = $('<a>').html(pageArray[i]).addClass('page');
     }

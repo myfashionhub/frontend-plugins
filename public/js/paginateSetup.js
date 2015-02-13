@@ -5,5 +5,11 @@ var paginationObj = {
 }
 
 $(function() {
-  var pagination = new Pagination('#pagninate', paginationObj);
+  var checkForContainer = setInterval(function() {
+    if ($('#paginate').length != 0) {
+      clearInterval(checkForContainer);
+      var pagination = new Pagination('#paginate', paginationObj);
+    }
+  }, 100);
+
 });
