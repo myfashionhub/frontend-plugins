@@ -3,7 +3,6 @@ var globalTweets = [],
 
 $(function() {
   fetchTweet(tweetConfig);
-
 });
 
 function fetchTweet(tweetConfig) {

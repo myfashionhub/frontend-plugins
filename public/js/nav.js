@@ -1,26 +1,9 @@
-$(function() {
-  displayContent();
-  $('.wrapper').children().hide();
-
-  $('nav a').click(function(e) {
-    var divName = $(e.target).attr('href').replace('#', '');
-    toggleNav(divName);
-  });
-
-  // Load page content
-  $('.splash').load('splash.html');
-  $('.slideshow').load('carousel.html');
-  $('.widget').load('widget.html');
-  $('.lazyload').load('lazyload.html');
-});
-
 function toggleNav(divName) {
-    $('nav a.current').removeClass('current');
-    var currentTab = $('nav a[href="#'+divName+'"]');
-    currentTab.addClass('current');
+  $('nav a.current').removeClass('current');
+  $('nav a[href="#'+divName+'"]').addClass('current');
 
-    $('.wrapper').find('.current').removeClass('current').hide();
-    $('.wrapper').find('div.'+divName).addClass('current').fadeIn();
+  $('.wrapper').find('.current').removeClass('current');
+  $('.wrapper').find('div.'+divName).addClass('current');
 }
 
 function displayContent() {
@@ -30,6 +13,6 @@ function displayContent() {
     window.location.href = 'splash.html';
   } else {
     var divName = currentHash.replace('#', '');
-    toggleNav(divName);
+    toggleNav(divName)
   }
 }

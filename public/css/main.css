@@ -37,6 +37,14 @@ nav ul {
   margin: 0 auto;
 }
 
+.wrapper > div {
+  display: none;
+}
+
+.wrapper > div.current {
+  display: block;
+}
+
 .content {
   width: 65%;
   max-width: 650px;
